@@ -1,59 +1,48 @@
-.completed {
-    text-decoration: line-through;
-    color: #999;
-}
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f8f9fc;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-.todo-container {
-    background: white;
-    padding: 30px;
-    width: 350px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-.todo-container h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.input-section button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 6px;
-    background: plum;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-}
-#taskList {
-    list-style: none;
-    padding: 0;
     margin: 0;
 }
-#taskList li {
-    background: #f0f1ff;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 10px;
+.container {
+    background: white;
+    padding: 25px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.input-section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.amount-row {
+    display: flex;
+    gap: 10px;
+}
+.amount-row input {
+    flex: 1;
+}
+input {
+    padding: 8px 12px;
+    background: rgb(153, 225, 153);
+    color: black;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
-#taskList span {
-    cursor: pointer;
+ul {
+    list-style: none;
+    padding: 0;
 }
-#taskList li {
-    animation: fadeIn 0.3s ease-in;
+#expenseList li {
+    animation: slideIn 0.3s ease;
 }
-@keyframes fadeIn {
+@keyframes slideIn {
     from {
         opacity: 0;
         transform: translateY(10px);
@@ -63,6 +52,17 @@ body {
         transform: translateY(0);
     }
 }
-#taskList li:hover {
-    background: blanchedalmond;
+#expenseList li:hover {
+    background-color: #c0e3c3;
+}
+#expenseList span:last-child {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+#expenseList span: :last-child:hover {
+    transform: scale(1.2);
+
+}
+button:active {
+    transform: scale(0.95);
 }
