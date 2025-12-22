@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background: white;
+    padding: 25px;
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.amount-row {
+    display: flex;
+    gap: 10px;
+}
+.amount-row input {
+    flex: 1;
+}
+input {
+    padding: 8px 12px;
+    background: rgb(153, 225, 153);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+#expenseList li {
+    animation: slideIn 0.3s ease;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#expenseList li:hover {
+    background-color: #c0e3c3;
+}
+#expenseList span:last-child {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+#expenseList span: :last-child:hover {
+    transform: scale(1.2);
+
+}
+button:active {
+    transform: scale(0.95);
+}
